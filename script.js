@@ -94,15 +94,34 @@ function updateActiveNav() {
 
 window.addEventListener("scroll", updateActiveNav);
 
+// untuk deskripsi
 window.addEventListener("scroll", function () {
-  const section = document.querySelector("#tourist .kotak-kotak");
+  const section1 = document.querySelector("#tourist .kotak-kotak");
+  const section2 = document.querySelector("#tourist");
   const wrapper = document.querySelector(".cards");
 
-  const rect = section.getBoundingClientRect();
+  const rect1 = section1.getBoundingClientRect();
+  const rect2 = section2.getBoundingClientRect();
 
-  if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
+  if (rect1.top <= window.innerHeight / 2 && rect2.bottom >= 0) {
     wrapper.classList.add("dark");
   } else {
     wrapper.classList.remove("dark"); 
   }
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href'); 
+    const target = document.querySelector(targetId);
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth', 
+        block: 'start'      
+      });
+    }
+  });
 });
