@@ -1,0 +1,83 @@
+h1, h3 {
+    font-family: "Inter", sans-serif;
+}
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f8fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px; /* fixed width for consistency */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.banner {
+    width: 100%;
+    height: 250px; /* give it some height space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0; /* light background to fill gaps */
+}
+
+.banner img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* shows full image */
+    border-radius: 8px;
+}
+
+
+/* Content */
+.card-content {
+    padding: 15px;
+}
+.title {
+    color: #35e67b;
+    margin-bottom: 10px;
+}
+ul {
+    padding-left: 20px;
+}
+p {
+    line-height: 1.4;
+}
+
+.activity {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    line-height: 1.6;
+}
